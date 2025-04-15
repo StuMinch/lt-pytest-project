@@ -1,6 +1,7 @@
 DS_Store
-/venv
+/venv/*
 hyperexecute*
 .hyperexecute
 .pytest_cache
 .updatedhyperexecute.yaml
+/reports/*
