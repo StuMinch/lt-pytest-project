@@ -12,10 +12,9 @@ def driver(request):
     options.browser_version = 'dev'
 
     lt_options = {}
-    lt_options['username'] = os.environ.get("LT_USERNAME")
+    lt_options['user'] = os.environ.get("LT_USERNAME")
     lt_options['accessKey'] = os.environ.get("LT_ACCESS_KEY")
-    lt_options['build'] = 'Onboarding - Pytest'
-    lt_options['name'] = 'Check Page Title'
+    lt_options['build'] = 'Pytest'
     lt_options['visual'] = True
     lt_options['video'] = True
     lt_options['w3c'] = True

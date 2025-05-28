@@ -17,4 +17,4 @@ Install the requirements:
 ```pip install -r requirements.txt```
 
 Run tests in parallel:
-```pytest -n 2 test_check_webpage_title.py```
+```pytest -n 2```
