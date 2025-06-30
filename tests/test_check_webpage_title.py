@@ -1,4 +1,5 @@
 import pytest
+import os
 from selenium.webdriver.common.by import By
 
 @pytest.mark.parametrize(
@@ -13,4 +14,6 @@ def test_page_title(driver, url, expected_title):
     status = "passed" if driver.title == expected_title else "failed"
     driver.execute_script("lambda-status={}".format(status))
     assert driver.title == expected_title, f"Page title mismatch. Expected: {expected_title}, Actual: {driver.title}"
+    name = os.path.basename(__file__)
+    driver.execute_script(f"lambda-name={name}")
     driver.quit()

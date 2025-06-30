@@ -1,4 +1,5 @@
 import pytest
+import os
 from selenium.webdriver.common.by import By
 
 @pytest.mark.parametrize("expected_state", [True])
@@ -15,4 +16,9 @@ def test_checkbox(driver, expected_state):
 
     status = "passed" if all(checkbox.is_selected() == expected_state for checkbox in checkboxes) else "failed"
     driver.execute_script(f"lambda-status={status}")
+    name = os.path.basename(__file__)
+    driver.execute_script(f"lambda-name={name}")
     driver.quit()
+
+
+    
